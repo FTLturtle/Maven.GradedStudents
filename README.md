@@ -1,6 +1,6 @@
 # Graded Students Lab
 * **Purpose** - to demonstrate the use of [Java classes](https://docs.oracle.com/javase/tutorial/java/concepts/class.html) and [data encapsulation](https://en.wikipedia.org/wiki/Data_encapsulation).
-* **Objective** - to create a `Classroom` which manipulates a composite `List` of `Student` objects which contain data detailing their `firstName`, `lastName`, and `examScores`.
+* **Objective** - to create a `Classroom` which manipulates a composite `List` of `Student` objects which contain data detailing their `firstName`, `lastName`, and `testScores`.
 * **Restrictions** - Ensure positive and negative unit tests exist per feature of the application
 
 
@@ -24,7 +24,7 @@
 		* a collection of characters representative of a first name.
 	* `String lastName`
 		* a collection of characters representative of a last name.
-	* `ArrayList<Double> examScores`
+	* `ArrayList<Double> testScores`
 		* a dynamic collection of decimal values representative of test scores.
 
 
@@ -95,8 +95,8 @@
 			// : Given
 			String firstName = "Leon";
 			String lastName = "Hunter";
-			Double[] examScores = { 100.0, 95.0, 123.0, 96.0 };
-			Student student = new Student(firstName, lastName, examScores);
+			Double[] testScores = { 100.0, 95.0, 123.0, 96.0 };
+			Student student = new Student(firstName, lastName, testScores);
 			
 			// When
 			String output = student.getExamScores();
@@ -123,7 +123,7 @@
 <br><br><br><br><br>
 
 * **Define method `addExamScore(double examScore)`**
-	* `Student` should define a method named `addExamScore` which uses a `double` parameter to add an `examScore` to its composite List `examScores`.
+	* `Student` should define a method named `addExamScore` which uses a `double` parameter to add an `examScore` to its composite List `testScores`.
 
 		* Sample Script:
 		
@@ -131,8 +131,8 @@
 			// : Given
 			String firstName = "Leon";
 			String lastName = "Hunter";
-			Double[] examScores = { };
-			Student student = new Student(firstName, lastName, examScores);
+			Double[] testScores = { };
+			Student student = new Student(firstName, lastName, testScores);
 			
 			// When
 			student.addExamScore(100.0);
@@ -169,8 +169,8 @@
 			// : Given
 			String firstName = "Leon";
 			String lastName = "Hunter";
-			Double[] examScores = { 100.0 };
-			Student student = new Student(firstName, lastName, examScores);
+			Double[] testScores = { 100.0 };
+			Student student = new Student(firstName, lastName, testScores);
 			
 			// When
 			student.setExamScore(1, 150.0);
@@ -204,8 +204,8 @@
 			// : Given
 			String firstName = "Leon";
 			String lastName = "Hunter";
-			Double[] examScores = { 100.0, 150.0, 250.0, 0 };
-			Student student = new Student(firstName, lastName, examScores);
+			Double[] testScores = { 100.0, 150.0, 250.0, 0 };
+			Student student = new Student(firstName, lastName, testScores);
 			
 			// When
 			double output = student.getAverageExamScore();
@@ -234,8 +234,8 @@
 			// : Given
 			String firstName = "Leon";
 			String lastName = "Hunter";
-			Double[] examScores = { 100.0, 150.0, 250.0, 0 };
-			Student student = new Student(firstName, lastName, examScores);
+			Double[] testScores = { 100.0, 150.0, 250.0, 0 };
+			Student student = new Student(firstName, lastName, testScores);
 			
 			// When
 			double output = student.toString();
@@ -383,8 +383,8 @@
 			// : Given
 			int maxNumberOfStudents = 1;
 			Classroom classroom = new Classroom(maxNumberOfStudents);
-			Double[] examScores = { 100.0, 150.0, 250.0, 0 };
-			Student student = new Student("Leon", "Hunter", examScores);			
+			Double[] testScores = { 100.0, 150.0, 250.0, 0 };
+			Student student = new Student("Leon", "Hunter", testScores);			
 
 			// When
 			String[] preEnrollment = classroom.getStudents();

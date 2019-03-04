@@ -5,6 +5,7 @@
 .idea/**
 .idea/**/tasks.xml
 .idea/dictionaries
+target/**
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -52,3 +53,5 @@ fabric.properties
 .project
 .classpath
 .settings
+
+.DS_Store
